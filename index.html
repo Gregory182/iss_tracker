@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ISS Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+  <header>
+    <h1>Position of the ISS satalite</h1>
+  </header>
+  <main>
+    <section>
+      <div class="iss-data">
+        <div class="slider-wrap">
+          Śledzenie:
+          <div class="slider">
+            <input id='checkbox' type="checkbox">
+            <label for="checkbox" class="lbl"></label>
+          </div>
+        </div>
+
+        <div class="list-wrap">
+          <ul>
+            <li>Szerokość: <span id="latitude"> </span>&deg;</li>
+            <li>Długość: <span id="longitude"> </span>&deg;</li>
+            <li>Wysokość: <span id="altitude"> </span> km</li>
+            <li>Prędkość: <span id="velocity"> </span> km/s</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div id="mapid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
